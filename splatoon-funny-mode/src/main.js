@@ -35,7 +35,7 @@ app.config.globalProperties.$subWeapon = subWeapon;
 app.config.globalProperties.$specialWeapon = specialWeapon;
 app.config.globalProperties.$stageinfo = stageinfo;
 app.config.globalProperties.$modeinfo = modeinfo;
-app.config.globalProperties.$api = "http://192.168.6.158:5000"
+app.config.globalProperties.$api = "http://114.55.55.99:5000"
 
 
 app.mount('#app');
