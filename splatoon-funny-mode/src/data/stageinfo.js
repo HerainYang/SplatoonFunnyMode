@@ -1,0 +1,26 @@
+const data = {
+    0: {id: 0, title: "Bluefin Depot", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/6/69/S3_Stage_Bluefin_Depot.png/200px-S3_Stage_Bluefin_Depot.png"},
+    1: {id: 1, title: "Flounder Heights", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/2/23/S3_Stage_Flounder_Heights.png/200px-S3_Stage_Flounder_Heights.png"},
+    2: {id: 2, title: "Hammerhead Bridge", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/d/d5/S_Stage_Hammerhead_Bridge.png/200px-S_Stage_Hammerhead_Bridge.png"},
+    3: {id: 3, title: "Museum d&#39;Alfonsino", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/6/6a/S3_Stage_Museum_d%27Alfonsino.png/200px-S3_Stage_Museum_d%27Alfonsino.png"},
+    4: {id: 4, title: "Mahi-Mahi Resort", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/6/6b/S3_Stage_Mahi-Mahi_Resort.png/200px-S3_Stage_Mahi-Mahi_Resort.png"},
+    5: {id: 5, title: "Humpback Pump Track", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/5/57/S3_Stage_Humpback_Pump_Track.png/200px-S3_Stage_Humpback_Pump_Track.png"},
+    6: {id: 6, title: "Inkblot Art Academy", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/4/45/S3_Stage_Inkblot_Art_Academy.png/200px-S3_Stage_Inkblot_Art_Academy.png"},
+    7: {id: 7, title: "Sturgeon Shipyard", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/4/45/S3_Stage_Sturgeon_Shipyard.png/200px-S3_Stage_Sturgeon_Shipyard.png"},
+    8: {id: 8, title: "Manta Maria", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/8/86/S3_Stage_Manta_Maria.png/200px-S3_Stage_Manta_Maria.png"},
+    9: {id: 9, title: "MakoMart", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/4/47/S3_Stage_MakoMart.png/200px-S3_Stage_MakoMart.png"},
+    10: {id: 10, title: "Wahoo World", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/7/71/S3_Stage_Wahoo_World.png/200px-S3_Stage_Wahoo_World.png"},
+    11: {id: 11, title: "Scorch Gorge", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/1/1c/S3_Stage_Scorch_Gorge.png/200px-S3_Stage_Scorch_Gorge.png"},
+    12: {id: 12, title: "Eeltail Alley", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/7/7d/S3_Stage_Eeltail_Alley.png/200px-S3_Stage_Eeltail_Alley.png"},
+    13: {id: 13, title: "Hagglefish Market", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/a/ad/S3_Stage_Hagglefish_Market.png/200px-S3_Stage_Hagglefish_Market.png"},
+    14: {id: 14, title: "Undertow Spillway", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/a/ad/S3_Stage_Undertow_Spillway.png/200px-S3_Stage_Undertow_Spillway.png"},
+    15: {id: 15, title: "Mincemeat Metalworks", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/d/d1/S3_Stage_Mincemeat_Metalworks.png/200px-S3_Stage_Mincemeat_Metalworks.png"},
+    16: {id: 16, title: "Brinewater Springs", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/f/fc/S3_Stage_Brinewater_Springs.png/200px-S3_Stage_Brinewater_Springs.png"},
+    17: {id: 17, title: "Um&#39;ami Ruins", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/9/95/S3_Stage_Um%27ami_Ruins.png/200px-S3_Stage_Um%27ami_Ruins.png"},
+    18: {id: 18, title: "Barnacle &amp; Dime", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/2/2a/S3_Stage_Barnacle_%26_Dime.png/200px-S3_Stage_Barnacle_%26_Dime.png"},
+    19: {id: 19, title: "Crableg Capital", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/b/bb/S3_Stage_Crableg_Capital.png/200px-S3_Stage_Crableg_Capital.png"},
+    20: {id: 20, title: "Shipshape Cargo Co.", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/8/8b/S3_Stage_Shipshape_Cargo_Co..png/200px-S3_Stage_Shipshape_Cargo_Co..png"},
+    21: {id: 21, title: "Robo ROM-en", img_url: "https://cdn.wikimg.net/en/splatoonwiki/images/thumb/9/92/S3_Stage_Robo_ROM-en.png/200px-S3_Stage_Robo_ROM-en.png"},
+}
+
+export default data;
