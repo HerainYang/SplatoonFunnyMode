@@ -1,6 +1,35 @@
 <template>
-  <router-view class="root"/>
+  <el-select v-model="value" class="m-2" placeholder="Select" size="large" @change="changeLanguage">
+    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+  </el-select>
+  <router-view class="root" />
 </template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      value: 'ch',
+      options: [
+        {
+          value: 'ch',
+          label: '中文'
+        },
+        {
+          value: 'en',
+          label: 'English'
+        }
+      ]
+    }
+  },
+  methods: {
+    changeLanguage() {
+      this.$i18n.locale = this.value
+    }
+  },
+}
+</script>
 
 <style>
 #app {
@@ -23,12 +52,12 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
-.root{
-    max-width: 1124px;
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    padding-bottom: 5rem;
-    padding-top: 5rem
+
+.root {
+  max-width: 1124px;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 5rem;
+  padding-top: 5rem
 }
 </style>

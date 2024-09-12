@@ -17,7 +17,7 @@
         <el-input v-model="this.joinForm.roomNumber" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onJoin()">Join</el-button>
+        <el-button type="primary" @click="onJoin()">{{ $t('Join') }}</el-button>
       </el-form-item>
     </el-form>
 
@@ -34,11 +34,16 @@
         <el-input v-model="this.createForm.name" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onCreate()">Create</el-button>
+        <el-button type="primary" @click="onCreate()">{{ $t('Create') }}</el-button>
       </el-form-item>
     </el-form>
 
-    <router-link to="/about" style="position: absolute; bottom: 0;">{{ $t('AboutThisPage') }}</router-link>
+    <div style="display:flex; flex-direction: column; margin-top: 200px;">
+      <router-link to="/comment" style="">{{ $t('CommentBoard') }}</router-link>
+      <router-link to="/about" style="">{{ $t('AboutThisPage') }}</router-link>
+    </div>
+
+
 
   </div>
 </template>
@@ -86,7 +91,7 @@ export default {
           { required: true, message: this.$t('PleaseSelectMode'), trigger: 'blur' }
         ]
 
-      }
+      },
     }
   },
   methods: {
@@ -112,7 +117,7 @@ export default {
             .then(response => response.json())
             .then(data => {
               console.log(data)
-              if(data.room_id == -1){
+              if (data.room_id == -1) {
                 this.$message({
                   message: this.$t('RoomFull'),
                   type: 'error'

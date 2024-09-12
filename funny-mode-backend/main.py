@@ -7,6 +7,8 @@ import pymongo
 import time
 from bson.objectid import ObjectId
 
+import comment
+
 weaponlist = []
 subweaponlist = []
 specialweaponlist = []
@@ -42,6 +44,11 @@ def create_app():
     return app
 
 app = create_app()
+app.register_blueprint(comment.app_comment, url_prefix='/comment')
+
+if __name__ == "__main__":
+    print("start")
+    app.run(host='0.0.0.0',port=7000, debug=True)
 
 @app.route('/')
 def hello_world():

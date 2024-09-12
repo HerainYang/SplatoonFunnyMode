@@ -1,7 +1,7 @@
 <template>
     <div style="display: flex; position: relative; align-items: center;">
         <div>{{ this.playerID }}</div>
-        <el-icon v-if="this.$store.state.user.is_admin == true && this.token != this.$store.state.user.token" class="deleteButton" @click="deletePlayer"><Close /></el-icon>
+        <el-icon v-if="this.$store.getters.getUserAdminStatus == true && this.token != this.$store.getters.getUserToken" class="deleteButton" @click="deletePlayer"><Close /></el-icon>
     </div>
 </template>
 
@@ -28,10 +28,10 @@ export default {
             console.log('delete')
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
-            myHeaders.append("Authorization", this.$store.state.user.token)
+            myHeaders.append("Authorization", this.$store.getters.getUserToken)
 
             var data = {
-                'roomNumber': this.$store.state.user.roomID,
+                'roomNumber': this.$store.getters.getUserRoomID,
                 'targetMemberToken': this.token
             }
 

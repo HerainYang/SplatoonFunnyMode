@@ -1,0 +1,8 @@
+db.comment.updateOne({'_id': ObjectId('6578ab61a2afdb3038a01f1e')}, {$pull: {'replies': 'replies.$[t1]'}}, {arrayFilters: [{'t1._id': ObjectId('6578f243a2afdb3038a01f27')}]})
+
+db.comment.updateOne({'_id': ObjectId('6578ab61a2afdb3038a01f1e')}, {$pull: {'replies': {'replies._id': ObjectId('6578f243a2afdb3038a01f27')}}})
+
+db.comment.updateOne({'_id': ObjectId('6578ab61a2afdb3038a01f1e')}, {$pop: {'replies': 1}})
+
+db.user.updateOne({'displayId': 'Herain'}, {$set: {'hiddenId': 'AdminHerainYang'}})
+

@@ -1,5 +1,6 @@
 import { createI18n } from 'vue-i18n'
 import en from './locales/en.json'
+import ch from './locales/ch.json'
 
 /**
  * Load locale messages
@@ -8,7 +9,7 @@ import en from './locales/en.json'
  * See: https://github.com/intlify/vue-i18n-loader#rocket-i18n-resource-pre-compilation
  */
 function loadLocaleMessages() {
-    const locales = [{en: en}]
+    const locales = [{en: en}, {ch: ch}]
     const messages = {}
     locales.forEach(locale => {
         const key = Object.keys(locale)
@@ -18,7 +19,7 @@ function loadLocaleMessages() {
 }
 
 export default createI18n({
-  locale: "en",
+  locale: "ch",
   fallbackLocale: "en",
   messages: loadLocaleMessages(),
 });

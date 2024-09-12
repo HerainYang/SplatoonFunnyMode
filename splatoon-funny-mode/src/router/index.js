@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import RandomWeaponModeView from '../views/Modes/RandomWeaponMode/RandomWeaponModeView.vue'
 import AboutViewVue from '@/views/AboutView.vue'
+import CommentViewVue from '@/views/CommentView.vue'
 
 const routes = [
   {
@@ -18,7 +19,12 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutViewVue
-  }
+  },
+  {
+    path: '/comment',
+    name: 'comment',
+    component: CommentViewVue
+  },
 ]
 
 const router = createRouter({

@@ -12,6 +12,7 @@ import specialWeapon from './data/specialweaponinfo.js'
 import stageinfo from './data/stageinfo.js'
 import modeinfo from './data/modeinfo.js'
 
+
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap/dist/js/bootstrap.js"
 
@@ -35,7 +36,7 @@ app.config.globalProperties.$subWeapon = subWeapon;
 app.config.globalProperties.$specialWeapon = specialWeapon;
 app.config.globalProperties.$stageinfo = stageinfo;
 app.config.globalProperties.$modeinfo = modeinfo;
-app.config.globalProperties.$api = "http://114.55.55.99:5000"
+app.config.globalProperties.$api = "/api"
 
 
 app.mount('#app');

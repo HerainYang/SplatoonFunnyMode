@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>{{ $t('RoomID') }}: {{ this.$store.state.user.roomID }}</div>
-    <el-checkbox v-if="this.$store.state.user.is_admin" v-model="this.unbalancedTeam" :label="this.$t('UnbalancedTeam')"
+    <div>{{ $t('RoomID') }}: {{ this.$store.getters.getUserRoomID }}</div>
+    <el-checkbox v-if="this.$store.getters.getUserAdminStatus" v-model="this.unbalancedTeam" :label="this.$t('UnbalancedTeam')"
       size="large" />
     <div class="modeStage">
       <div v-if="this.teamInfo.stage_id != -1" style="height: 200px;">
@@ -26,7 +26,7 @@
     <TeamDisplay :teamWeaponIDs="this.teamInfo.sub_team" :teamID="-1"></TeamDisplay>
 
     <div class="buttonGroup">
-      <button v-if="this.$store.state.user.is_admin" class="btn btn-primary" type="submit" @click="updateWeapon">{{
+      <button v-if="this.$store.getters.getUserAdminStatus" class="btn btn-primary" type="submit" @click="updateWeapon">{{
         $t('UpdateWeapon') }}</button>
       <button class="btn btn-primary" type="submit" @click="exitRoom">{{ $t('ExitRoom') }}</button>
     </div>
@@ -62,8 +62,9 @@ export default {
       unbalancedTeam: false
     }
   },
-  mounted() {
-    this.updateWeapon()
+  async mounted() {
+    await this.updateWeapon()
+    this.updateRoomInfo()
     window.timer = setInterval(() => {
       setTimeout(() => {
         this.updateRoomInfo()
@@ -71,13 +72,13 @@ export default {
     }, 1000)
   },
   methods: {
-    updateWeapon() {
+    async updateWeapon() {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("Authorization", this.$store.state.user.token)
+      myHeaders.append("Authorization", this.$store.getters.getUserToken)
 
       var data = {
-        roomNumber: this.$store.state.user.roomID,
+        roomNumber: this.$store.getters.getUserRoomID,
         unbalancedTeam: this.unbalancedTeam
       }
 
@@ -101,10 +102,10 @@ export default {
     updateRoomInfo() {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("Authorization", this.$store.state.user.token)
+      myHeaders.append("Authorization", this.$store.getters.getUserToken)
 
       var data = {
-        roomNumber: this.$store.state.user.roomID
+        roomNumber: this.$store.getters.getUserRoomID
       }
 
       var requestOptions = {
@@ -140,11 +141,11 @@ export default {
       console.log('delete')
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("Authorization", this.$store.state.user.token)
+      myHeaders.append("Authorization", this.$store.getters.getUserToken)
 
       var data = {
-        'roomNumber': this.$store.state.user.roomID,
-        'targetMemberToken': this.$store.state.user.token
+        'roomNumber': this.$store.getters.getUserRoomID,
+        'targetMemberToken': this.$store.getters.getUserToken
       }
 
       var requestOptions = {
